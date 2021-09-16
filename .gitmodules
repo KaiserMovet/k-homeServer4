@@ -1,0 +1,3 @@
+[submodule "khS/khs4-pc_master"]
+	path = khS/khs4-pc_master
+	url = git@github.com:KaiserMovet/khs4-pc_master.git
