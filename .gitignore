@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+khS/khS/static/package-lock.json
+khS/khS/static/node_modules
