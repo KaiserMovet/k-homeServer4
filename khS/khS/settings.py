@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'khS4_pc_master.apps.KhS4PcMasterConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'khS.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'khS' / 'templates', BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'khS' / 'templates', BASE_DIR / 'khS4_pc_master' / 'templates', BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -106,7 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Warsaw'
 
 USE_I18N = True
 
@@ -122,7 +123,9 @@ STATIC_URL = str(BASE_DIR / '/khS/khS/static') + '/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "khS4_pc_master/static"),
     os.path.join(BASE_DIR, "khS/static"),
+
 ]
 
 # Default primary key field type
