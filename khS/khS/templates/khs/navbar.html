@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">K-Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -7,6 +7,44 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- STYLE -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Style
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('slate')">Slate</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('solar')">Solar</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('vapor')">Vapor</a></li>
+                        <li>
+                            <div class="dropdown-divider"></div>
+                        </li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('default')">Default</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('cerulean')">Cerulean</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('cosmo')">Cosmo</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('cyborg')">Cyborg</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('darkly')">Darkly</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('flatly')">Flatly</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('journal')">Journal</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('litera')">Litera</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('lumen')">Lumen</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('lux')">Lux</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('materia')">Materia</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('minty')">Minty</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('morph')">Morph</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('pulse')">Pulse</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('quartz')">Quartz</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('sandstone')">Sandstone</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('simplex')">Simplex</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('sketchy')">Sketchy</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('spacelab')">Spacelab</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('superhero')">Superhero</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('united')">United</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('yeti')">Yeti</a></li>
+                        <li><a class="dropdown-item" onClick="Utils.setStyle('zephyr')">Zephyr</a></li>
+                    </ul>
+                </li>
                 <!-- ADMIN -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'admin:index' %}">Admin<span class="sr-only"></span></a>
@@ -16,6 +54,9 @@
                     <a class="nav-link" href="{% url 'khS4_pc_master:index' %}">PC Master<span
                             class="sr-only"></span></a>
                 </li>
+            </ul>
+            <!-- Current style -->
+            current style: <a id="current_style">{{ request.COOKIES.style }}</a>
         </div>
     </div>
 </nav>

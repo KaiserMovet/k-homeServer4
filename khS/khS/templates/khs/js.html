@@ -6,10 +6,20 @@
 <link rel="stylesheet" href="{% static 'node_modules/bootstrap-icons/font/bootstrap-icons.css' %}">
 
 <link rel="stylesheet" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.css' %}">
-<link rel="stylesheet" href="{% static 'node_modules/bootswatch/dist/slate/bootstrap.css' %}">
+
+<!-- BOOTSTRAP STYLE-->
+{% if not request.COOKIES.style %}
+<link rel="stylesheet" id="bootswatch" href="{% static 'node_modules/bootswatch/dist/slate/bootstrap.css' %}">
+{% elif request.COOKIES.style != 'default'%}
+<link rel="stylesheet" id="bootswatch"
+    href="{% static 'node_modules/bootswatch/dist/'|add:request.COOKIES.style|add:'/bootstrap.css' %}">
+{% else %}
+<link rel="stylesheet" id="bootswatch" href="">
+{% endif %}
 
 <!-- CASH -->
 <script src="{% static 'node_modules/cash-dom/dist/cash.min.js' %}"></script>
 
 <!-- COMMON -->
 <script src="{% static 'khs/common.js' %}"></script>
+<link rel="stylesheet" href="{% static 'khs/common.css' %}">

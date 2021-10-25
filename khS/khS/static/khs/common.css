@@ -1,0 +1,21 @@
+/* .card{
+    padding: 1.5em .5em .5em;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn{
+    border-radius:2em;
+    background-color: teal;
+    color: #ffffff;
+    padding: .5em 1.5em;
+}
+.btn:hover {
+  background-color: rgba(0, 128, 128, 0.7);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+} */
+
+.khs-rounded {
+    border-radius:2em;
+  }
