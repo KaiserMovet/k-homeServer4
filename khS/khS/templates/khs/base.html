@@ -7,7 +7,15 @@
 
 <body>
     {% include 'khs/navbar.html' %}
-    {% block body %} {% endblock %}
+    <div class="container-fluid">
+        <!-- Content here -->
+        {% block body %} {% endblock %}
+    </div>
+
+    <!-- Toasts -->
+    <div class="toast-container position-absolute p-3 bottom-0 end-0" id="khs_toast">
+    </div>
+
 </body>
 
 </html>
