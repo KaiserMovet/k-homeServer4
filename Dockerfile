@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # install dependencies
-RUN apk add --no-cache npm
+RUN apk add --no-cache npm python3-dev mariadb-dev build-base
 RUN pip install --upgrade pip 
 COPY ./req.txt /usr/src/app
 RUN pip install -r req.txt
