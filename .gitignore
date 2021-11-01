@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 khS/khS/static/package-lock.json
 khS/khS/static/node_modules
+khS/defaults.cnf
